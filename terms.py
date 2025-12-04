@@ -9,3 +9,4 @@ def operation(a, n, k):
         print( a, end=' , ')
 print('operation(',n,')=')  
 operation([], n, n)
+
