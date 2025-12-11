@@ -4,12 +4,14 @@ def operation1(a, b):
     else:
           return "Число несовершенное"
 
-def operation2(n):
-    a = []    #Cоздание пустого списка
-    for i in range(1, n):
-        if n % i == 0:   # Если i делитель n, добавляем его к сумме
-            a.append(i)
-    return a
+def operation2(n, i=1, a=[]):
+    if i == 1:
+        a = []
+    if i == n:
+        return a
+    if n % i == 0:   # Если i делитель n, добавляем его к сумме
+        a.append(i)
+    return operation2(n, i+1, a)
 
 def main():
     b = int(input("Введите число: "))
